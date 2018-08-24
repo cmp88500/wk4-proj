@@ -24,13 +24,22 @@ h1 {
 
 #display {
   background: yellow;
+  position: absolute;
   height: 200px;
   width: 50%;
   margin-right: 20px;
-  float: right;
   padding: 10px;
 }
 
 #display h3 {
   text-align: center;
+}
+
+#review {
+  overflow: wrap;
+  list-style-type: square;
+}
+
+#custom {
+  display: none;
 }

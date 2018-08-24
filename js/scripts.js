@@ -23,27 +23,28 @@ $(document).ready(function() {
     $("#review").empty();
 
 
-    var inputToppings = $("#toppings option:selected").val();
+    var input = $("#toppings option:selected").val();
       console.log(inputToppings)
-
-
-      if (inputToppings === "pepperoni") {
+      if (input === "pepperoni") {
         var inputSize = pepperoni.size
-        var inputPizza = pepperoni.toppings;
+        var inputToppings = pepperoni.toppings;
         var inputPrice = pepperoni.priceSet();
-    } if (inputToppings === "meats") {
+    } if (input === "meats") {
         var inputSize = meats.size
-        var inputPizza = meats.toppings;
+        var inputToppings = meats.toppings;
         var inputPrice = meats.priceSet();
-    } if (inputToppings === "cheese") {
+    } if (input === "cheese") {
         var inputSize = cheese.size
-        var inputPizza = cheese.toppings;
+        var inputToppings = cheese.toppings;
         var inputPrice = cheese.priceSet();
-    } if (inputToppings === "supreme") {
+    } if (input === "supreme") {
         var inputSize = supreme.size
-        var inputPizza = supreme.toppings;
+        var inputToppings = supreme.toppings;
         var inputPrice = supreme.priceSet();
+    } if (input === "custom") {
+      $("#custom").show();
     }
+
 var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
     console.log(inputPizza);
 
