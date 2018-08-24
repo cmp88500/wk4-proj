@@ -13,6 +13,7 @@ var cheese = new Pizza ("large", ["cheese"], 5.00);
 var pepperoni = new Pizza ("large", ["cheese", "pepperoni"], 6.00);
 var meats = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon"], 8.00);
 var supreme = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon", "green peppers", "mushrooms", "olives"], 8.50);
+var custom = new Pizza ("large", ["cheese"], 5.00);
 
 console.log(pepperoni.toppings)
 // USER INTERFACE LOGIC
@@ -43,7 +44,7 @@ $(document).ready(function() {
         var inputPizza = supreme.toppings;
         var inputPrice = supreme.priceSet();
     }
-var inputPizza = new Pizza(size, toppings, price);
+var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
     console.log(inputPizza);
 
 
