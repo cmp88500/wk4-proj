@@ -39,7 +39,7 @@ var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
 
     $("#review").append("<li><span class='review'>" + inputPizza.size + "</span></li>");
     $("#review").append("<li><span class='review'>" + inputPizza.toppings + "</span></li>");
-    $("#review").append("<li><span class='review' id='price'" + inputPizza.priceSet() + "</span></li>");
+    $("#review").append("<li><span class='review' id='price'>" + inputPizza.price + "</span></li>");
 
     // $(".review").
 });
