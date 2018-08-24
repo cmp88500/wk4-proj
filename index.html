@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <title>Pizza</title>
-  <script src="js/jquery.js"></script>
-  <script src="js/scripts.js"></script>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <div id="top"></div>
-  <div id="soon">
-    <h1>Pizza coming soon</h1>
-  </div>
-
-  <form id="pizzaForm">
-    <div class="pizzaGroup">
-      <label for="size">Pick Size:</label>
-      <select id="size">
-        <option></option>
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-      </select>
+  <head>
+    <meta charset="utf-8">
+    <title>Pizza</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="top"></div>
+    <div id="soon">
+      <h1>Pizza coming soon</h1>
     </div>
-    <div class="pizzaGroup">
-      <label for="size">Pick Pizza:</label>
-      <select id="toppings">
-        <option></option>
-        <option value="pepperoni">Pepperoni</option>
-        <option value="cheese">Cheese</option>
-        <option value="meats">Meats</option>
-        <option value="supreme">Supreme</option>
-        <option value="custom">Create Your Own</option>
-      </select>
-      <div id="custom">
-        <input type="checkbox" name="topping" value="cheese">Cheese<br>
-        <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
-        <input type="checkbox" name="topping" value="sausage">Sausage<br>
-        <input type="checkbox" name="topping" value="bacon">Bacon<br>
-        <input type="checkbox" name="topping" value="greenPeppers">Green Peppers<br>
-        <input type="checkbox" name="topping" value="mushrooms">Mushrooms<br>
-        <input type="checkbox" name="topping" value="olives">Olives<br>
+
+    <form id="pizzaForm">
+      <div class="pizzaGroup">
+        <label for="size">Pick Size:</label>
+        <select id="size">
+          <option></option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
       </div>
-      <button type="submit" id="btn">Submit</button>
-    </form>
+      <div class="pizzaGroup">
+        <label for="size">Pick Pizza:</label>
+        <select id="toppings">
+          <option></option>
+          <option value="pepperoni">Pepperoni</option>
+          <option value="cheese">Cheese</option>
+          <option value="meats">Meats</option>
+          <option value="supreme">Supreme</option>
+          <option value="custom">Create Your Own</option>
+        </select>
+        <div id="custom">
+          <input type="checkbox" name="topping" value="cheese">Cheese<br>
+          <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
+          <input type="checkbox" name="topping" value="sausage">Sausage<br>
+          <input type="checkbox" name="topping" value="bacon">Bacon<br>
+          <input type="checkbox" name="topping" value="greenPeppers">Green Peppers<br>
+          <input type="checkbox" name="topping" value="mushrooms">Mushrooms<br>
+          <input type="checkbox" name="topping" value="olives">Olives<br>
+        </div>
+        <button type="submit" id="btn">Submit</button>
+      </form>
 
-    <div id="display">
-      <h3>Review Order</h3>
-      <ul id="review">
+      <div id="display">
+        <h3>Review Order</h3>
+        <ul id="review">
 
-      </ul>
-    </div>
+        </ul>
+      </div>
 
   </body>
-  </html>
+</html>

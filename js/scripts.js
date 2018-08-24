@@ -28,21 +28,10 @@ var meats = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon"], 8.0
 var supreme = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon", "green peppers", "mushrooms", "olives"], 8.50);
 var custom = new Pizza ("large", ["cheese"], 5.00);
 
-// Pizza.prototype.size = function () {
-//   if (this.size = "small") {
-//     return this.price - 2;
-//   }
-//   if (this.size = "medium") {
-//     return this.price - 1;
-//   }
-// }
 Pizza.prototype.priceSet = function() {
-
   return "$" + this.price.toFixed(2)
 }
 
-
-console.log(pepperoni.toppings)
 // USER INTERFACE LOGIC
 $(document).ready(function() {
   $("#pizzaForm").submit(function(event) {
@@ -51,8 +40,8 @@ $(document).ready(function() {
 
 
     var input = $("#toppings option:selected").val();
-      console.log(inputToppings)
-      if (input === "pepperoni") {
+    console.log(inputToppings)
+    if (input === "pepperoni") {
         var inputSize = pepperoni.size
         var inputToppings = pepperoni.toppings;
         var inputPrice = pepperoni.priceSet();
@@ -74,27 +63,14 @@ $(document).ready(function() {
       $("input:checkbox[name=topping]:checked").each(function() {
         var check = $(this).val();
         $("#review").append("<li><span class='review'>" + check + "</span></li>")
-        check.forEach(function(top) {
-          customToppings.push(top);
-        });
-        console.log(customToppings);
       });
     }
 
-var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
-    console.log(inputPizza);
-
-
+    var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
 
     $("#review").append("<li><span class='review'>" + inputPizza.size + "</span></li>");
     $("#review").append("<li><span class='review'>" + inputPizza.toppings + "</span></li>");
     $("#review").append("<li><span class='review' id='price'>" + inputPizza.price + "</span></li>");
 
-    // $(".review").
-
+  });
 });
-});
-// console.log(cheese);
-// console.log(meats.toppings);
-// console.log(pepperoni.price);
-// console.log(pepperoni.priceSet());
