@@ -19,12 +19,20 @@ $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
 
-    var inputSize = $("option#size").val();
-    var inputToppings = $("option#toppings").val();
 
-    var inputPizza = new Pizza(inputSize, inputToppings);
-    // $("#review").prepend("<li><span class='review'>" + Pizza.size + "</span></li>");
-    // $("#review").after("<li><span class='review'>" + Pizza.toppings + "</span></li>");
+    var inputToppings = $("#toppings option:selected").val();
+    console.log(inputToppings);
+    // if () === "pepperoni")
+    //   inputPizza === pepperoni;
+    //   console.log(inputPizza);
+
+    // var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
+
+
+
+
+    // $("#review").append("<li><span class='review'>" + inputPizza.size + "</span></li>");
+    // $("#review").append("<li><span class='review'>" + inputPizza.toppings + "</span></li>");
     // $("#review").after("<li><span class='review' id='price'" + Pizza.priceSet() + "</span></li>");
     //
     // $(".review").
