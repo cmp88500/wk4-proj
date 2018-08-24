@@ -5,15 +5,30 @@ function Pizza (size, toppings, price) {
   this.price = price;
 }
 
-Pizza.prototype.priceSet = function() {
-  return "$" + this.price.toFixed(2)
-}
+function Custom (size, toppings, price) {
+  this.size = size;
+  this.toppings = [];
+  this.price = 3.00
 
-var cheese = new Pizza ("large", ["cheese"], 5.00);
-var pepperoni = new Pizza ("large", ["cheese", "pepperoni"], 6.00);
+var cheese = new Pizza ("", ["cheese"], 5.00);
+var pepperoni = new Pizza ("", ["cheese", "pepperoni"], 6.00);
 var meats = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon"], 8.00);
 var supreme = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon", "green peppers", "mushrooms", "olives"], 8.50);
 var custom = new Pizza ("large", ["cheese"], 5.00);
+
+Pizza.prototype.size = function () {
+  if (this.size = "small") {
+    return this.price - 2;
+  }
+  if (this.size = "medium") {
+    return this.price - 1;
+  }
+}
+Pizza.prototype.priceSet = function() {
+
+  return "$" + this.price.toFixed(2)
+}
+
 
 console.log(pepperoni.toppings)
 // USER INTERFACE LOGIC
