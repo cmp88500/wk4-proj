@@ -18,11 +18,18 @@ var supreme = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon", "g
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
-    $("#review").prepend("<li><span class='display'>" + Pizza.size + "</span></li>");
-    $("#review").after("<li><span class='display'>" + Pizza.toppings + "</span></li>");
-    $("#review").after("<li><span class='display' id='price'" + Pizza.priceSet() + "</span></li>");
-})
-})
+
+    var inputSize = $("option#size").val();
+    var inputToppings = $("option#toppings").val();
+
+    var inputPizza = new Pizza(inputSize, inputToppings);
+    // $("#review").prepend("<li><span class='review'>" + Pizza.size + "</span></li>");
+    // $("#review").after("<li><span class='review'>" + Pizza.toppings + "</span></li>");
+    // $("#review").after("<li><span class='review' id='price'" + Pizza.priceSet() + "</span></li>");
+    //
+    // $(".review").
+});
+});
 
 // console.log(cheese);
 // console.log(meats.toppings);
