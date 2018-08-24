@@ -10,8 +10,20 @@ function Custom (size, toppings, price) {
   this.toppings = [];
   this.price = 3.00
 
-var cheese = new Pizza ("", ["cheese"], 5.00);
-var pepperoni = new Pizza ("", ["cheese", "pepperoni"], 6.00);
+var small = { size: "small", toppings: [], price = 3.00 };
+var medium = { size: "medium", toppings: [], price = 4.00 };
+var large = { size: "large"}, toppings: [], price = 5.00 };
+
+
+var pepperoni = { toppings: "pepperoni" };
+var sausage = { toppings: "sausage" };
+var bacon = { toppings: "bacon" };
+var greenPeppers = { toppings: "greenPeppers" };
+var mushrooms = { toppings: "mushrooms" };
+var olives = { toppings:"olives" };
+
+var cheese = new Pizza ("large", ["cheese"], 5.00);
+var pepperoni = new Pizza ("large", ["cheese", "pepperoni"], 6.00);
 var meats = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon"], 8.00);
 var supreme = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon", "green peppers", "mushrooms", "olives"], 8.50);
 var custom = new Pizza ("large", ["cheese"], 5.00);
