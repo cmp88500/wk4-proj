@@ -16,12 +16,12 @@ var supreme = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon", "g
 
 // USER INTERFACE LOGIC
 $(document).ready(function() {
-  $("#formOne").submit(function(event) {
+  $("#pizzaForm").submit(function(event) {
     event.preventDefault();
 
 
     var inputToppings = $("#toppings option:selected").val();
-    console.log(inputToppings);
+    console.log(inputToppings)
     // if () === "pepperoni")
     //   inputPizza === pepperoni;
     //   console.log(inputPizza);
