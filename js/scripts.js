@@ -21,13 +21,17 @@ $(document).ready(function() {
 
 
     var inputToppings = $("#toppings option:selected").val();
-    console.log(inputToppings)
-    // if () === "pepperoni")
-    //   inputPizza === pepperoni;
-    //   console.log(inputPizza);
+      console.log(inputToppings)
 
-    // var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
 
+      if (inputToppings === "pepperoni") {
+        inputSize = pepperoni.size
+        inputPizza = pepperoni.toppings;
+        inputPrice = pepperoni.priceSet();
+      }
+
+var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
+    console.log(inputPizza.toppings);
 
 
 
