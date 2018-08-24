@@ -14,10 +14,12 @@ var pepperoni = new Pizza ("large", ["cheese", "pepperoni"], 6.00);
 var meats = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon"], 8.00);
 var supreme = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon", "green peppers", "mushrooms", "olives"], 8.50);
 
+console.log(pepperoni.toppings)
 // USER INTERFACE LOGIC
 $(document).ready(function() {
   $("#pizzaForm").submit(function(event) {
     event.preventDefault();
+    $("#review").empty();
 
 
     var inputToppings = $("#toppings option:selected").val();
@@ -25,20 +27,20 @@ $(document).ready(function() {
 
 
       if (inputToppings === "pepperoni") {
-        inputSize = pepperoni.size
-        inputPizza = pepperoni.toppings;
-        inputPrice = pepperoni.priceSet();
+        var inputSize = pepperoni.size
+        var inputPizza = pepperoni.toppings;
+        var inputPrice = pepperoni.priceSet();
       }
 
 var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
-    console.log(inputPizza.toppings);
+    console.log(inputPizza.price);
 
 
 
-    // $("#review").append("<li><span class='review'>" + inputPizza.size + "</span></li>");
-    // $("#review").append("<li><span class='review'>" + inputPizza.toppings + "</span></li>");
-    // $("#review").after("<li><span class='review' id='price'" + Pizza.priceSet() + "</span></li>");
-    //
+    $("#review").append("<li><span class='review'>" + inputPizza.size + "</span></li>");
+    $("#review").append("<li><span class='review'>" + inputPizza.toppings + "</span></li>");
+    $("#review").append("<li><span class='review' id='price'" + inputPizza.priceSet() + "</span></li>");
+
     // $(".review").
 });
 });
