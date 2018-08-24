@@ -41,8 +41,13 @@ $(document).ready(function() {
         var inputSize = supreme.size
         var inputToppings = supreme.toppings;
         var inputPrice = supreme.priceSet();
+
     } if (input === "custom") {
-      $("#custom").show();
+      var customToppings = []
+      $("input:checkbox[name=topping]:checked").each(function() {
+        var check = $(this).val();
+        $("#review").append("<li><span class='review'>" + check + "</span></li>")
+      })
     }
 
 var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
