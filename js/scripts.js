@@ -30,10 +30,21 @@ $(document).ready(function() {
         var inputSize = pepperoni.size
         var inputPizza = pepperoni.toppings;
         var inputPrice = pepperoni.priceSet();
-      }
-
-var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
-    console.log(inputPizza.price);
+    } if (inputToppings === "meats") {
+        var inputSize = meats.size
+        var inputPizza = meats.toppings;
+        var inputPrice = meats.priceSet();
+    } if (inputToppings === "cheese") {
+        var inputSize = cheese.size
+        var inputPizza = cheese.toppings;
+        var inputPrice = cheese.priceSet();
+    } if (inputToppings === "supreme") {
+        var inputSize = supreme.size
+        var inputPizza = supreme.toppings;
+        var inputPrice = supreme.priceSet();
+    }
+var inputPizza = new Pizza(size, toppings, price);
+    console.log(inputPizza);
 
 
 
