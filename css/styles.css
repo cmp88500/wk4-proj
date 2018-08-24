@@ -21,3 +21,16 @@ h1 {
   text-align: center;
   display: none;
 }
+
+#display {
+  background: yellow;
+  height: 200px;
+  width: 50%;
+  margin-right: 20px;
+  float: right;
+  padding: 10px;
+}
+
+#display h3 {
+  text-align: center;
+}

@@ -1,3 +1,4 @@
+// BUSINESS LOGIC
 function Pizza (size, toppings, price) {
   this.size = size;
   this.toppings = toppings;
@@ -13,7 +14,8 @@ var pepperoni = new Pizza ("large", ["cheese", "pepperoni"], 6.00);
 var meats = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon"], 8.00);
 var supreme = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon", "green peppers", "mushrooms", "olives"], 8.50);
 
-console.log(cheese);
-console.log(meats.toppings);
-console.log(pepperoni.price);
-console.log(pepperoni.priceSet());
+
+// console.log(cheese);
+// console.log(meats.toppings);
+// console.log(pepperoni.price);
+// console.log(pepperoni.priceSet());
