@@ -10,6 +10,25 @@ var size= ["small", "medium", "large", "xl"]
 var pizza = [];
 var allToppings = [];
 
+var chooseSize = prompt("What size would you like? (S/M/L/XL)?") {
+  if (chooseSize === "S") {
+    this.size === size[0];
+    order.size = size[0];
+  }
+  if (chooseSize === "M") {
+    this.size === size[1];
+    order.size = size[1];
+  }
+  if (chooseSize === "L") {
+    this.size === size[2];
+    order.size = size[2];
+  }
+  if (chooseSize === "XL") {
+    this.size === size[3];
+    order.size = size[3];
+  }
+}
+
 // var cheese = new Pizza ("large", ["cheese"], 5.00);
 // var pepperoni = new Pizza ("large", ["cheese", "pepperoni"], 6.00);
 // var meats = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon"], 8.00);
@@ -18,11 +37,7 @@ var allToppings = [];
 
 Pizza.prototype.priceSet = function() {
   this.price = 7
-  if (this.size === "small") {
-    order.size = size[0];
-  }
   if (this.size === "medium") {
-    order.size = size[1];
     this.price += 2;
   }
   if (this.size === "large") {
@@ -42,44 +57,44 @@ console.log(order.size)
 
 
 // USER INTERFACE LOGIC
-$(document).ready(function() {
-  $("#pizzaForm").submit(function(event) {
-    event.preventDefault();
-    $("#review").empty();
-
-
-    var input = $("#toppings option:selected").val();
-    console.log(inputToppings)
-    if (input === "pepperoni") {
-        var inputSize = pepperoni.size
-        var inputToppings = pepperoni.toppings;
-        var inputPrice = pepperoni.priceSet();
-    } if (input === "meats") {
-        var inputSize = meats.size
-        var inputToppings = meats.toppings;
-        var inputPrice = meats.priceSet();
-    } if (input === "cheese") {
-        var inputSize = cheese.size
-        var inputToppings = cheese.toppings;
-        var inputPrice = cheese.priceSet();
-    } if (input === "supreme") {
-        var inputSize = supreme.size
-        var inputToppings = supreme.toppings;
-        var inputPrice = supreme.priceSet();
-
-    } if (input === "custom") {
-      var customToppings = []
-      $("input:checkbox[name=topping]:checked").each(function() {
-        var check = $(this).val();
-        $("#review").append("<li><span class='review'>" + check + "</span></li>")
-      });
-    }
-
-    var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
-
-    $("#review").append("<li><span class='review'>" + inputPizza.size + "</span></li>");
-    $("#review").append("<li><span class='review'>" + inputPizza.toppings + "</span></li>");
-    $("#review").append("<li><span class='review' id='price'>" + inputPizza.price + "</span></li>");
-
-  });
-});
+// $(document).ready(function() {
+//   $("#pizzaForm").submit(function(event) {
+//     event.preventDefault();
+//     $("#review").empty();
+//
+//
+//     var input = $("#toppings option:selected").val();
+//     console.log(inputToppings)
+//     if (input === "pepperoni") {
+//         var inputSize = pepperoni.size
+//         var inputToppings = pepperoni.toppings;
+//         var inputPrice = pepperoni.priceSet();
+//     } if (input === "meats") {
+//         var inputSize = meats.size
+//         var inputToppings = meats.toppings;
+//         var inputPrice = meats.priceSet();
+//     } if (input === "cheese") {
+//         var inputSize = cheese.size
+//         var inputToppings = cheese.toppings;
+//         var inputPrice = cheese.priceSet();
+//     } if (input === "supreme") {
+//         var inputSize = supreme.size
+//         var inputToppings = supreme.toppings;
+//         var inputPrice = supreme.priceSet();
+//
+//     } if (input === "custom") {
+//       var customToppings = []
+//       $("input:checkbox[name=topping]:checked").each(function() {
+//         var check = $(this).val();
+//         $("#review").append("<li><span class='review'>" + check + "</span></li>")
+//       });
+//     }
+//
+//     var inputPizza = new Pizza(inputSize, inputToppings, inputPrice);
+//
+//     $("#review").append("<li><span class='review'>" + inputPizza.size + "</span></li>");
+//     $("#review").append("<li><span class='review'>" + inputPizza.toppings + "</span></li>");
+//     $("#review").append("<li><span class='review' id='price'>" + inputPizza.price + "</span></li>");
+//
+//   });
+// });
