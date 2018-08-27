@@ -18,19 +18,27 @@ var allToppings = [];
 
 Pizza.prototype.priceSet = function() {
   this.price = 7
+  if (this.size === "small") {
+    order.size = size[0];
+  }
   if (this.size === "medium") {
+    order.size = size[1];
     this.price += 2;
   }
   if (this.size === "large") {
+    order.size = size[2];
     this.price += 3.75;
   }
   if (this.size === "xl") {
+    order.size = size[3];
     this.price += 5.25;
   }
   return "$" + this.price.toFixed(2)
 }
 
+var order = new Pizza (size);
 
+console.log(order.size)
 
 
 // USER INTERFACE LOGIC
