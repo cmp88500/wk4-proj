@@ -8,26 +8,23 @@ function Pizza (size) {
 
 var size= ["small", "medium", "large", "xl"]
 var pizza = [];
-var allToppings = [];
+var allToppings = ["pepperoni", "sausage", "mushrooms"];
 
-var chooseSize = prompt("What size would you like? (S/M/L/XL)?") {
+var order = new Pizza (size);
+
+var chooseSize = prompt("What size would you like? (S/M/L/XL)?")
   if (chooseSize === "S") {
-    this.size === size[0];
     order.size = size[0];
   }
   if (chooseSize === "M") {
-    this.size === size[1];
     order.size = size[1];
   }
   if (chooseSize === "L") {
-    this.size === size[2];
     order.size = size[2];
   }
   if (chooseSize === "XL") {
-    this.size === size[3];
     order.size = size[3];
   }
-}
 
 // var cheese = new Pizza ("large", ["cheese"], 5.00);
 // var pepperoni = new Pizza ("large", ["cheese", "pepperoni"], 6.00);
@@ -41,19 +38,26 @@ Pizza.prototype.priceSet = function() {
     this.price += 2;
   }
   if (this.size === "large") {
-    order.size = size[2];
+    this.size = size[2];
     this.price += 3.75;
   }
   if (this.size === "xl") {
-    order.size = size[3];
+    this.size = size[3];
     this.price += 5.25;
   }
-  return "$" + this.price.toFixed(2)
-}
+  for (var i = 0; i <= allToppings.length; i++) {
+    this.price += i * 2.00;
+  }
+    return "$" + this.price.toFixed(2)
+  }
 
-var order = new Pizza (size);
 
-console.log(order.size)
+
+
+
+console.log(order.size);
+console.log(order.priceSet());
+console.log(allToppings.length);
 
 
 // USER INTERFACE LOGIC
