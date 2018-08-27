@@ -45,10 +45,8 @@ Pizza.prototype.priceSet = function() {
     this.size = size[3];
     this.price += 5.25;
   }
-  for (var i = 0; i <= allToppings.length; i++) {
-    this.price += i * 2.00;
-  }
-    return "$" + this.price.toFixed(2)
+    this.price += (allToppings.length * 2.00);
+    return "$" + this.price.toFixed(2);
   }
 
 
