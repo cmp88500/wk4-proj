@@ -6,7 +6,8 @@ function Pizza (size) {
   // this.sauce = sauce;
 }
 
-var size= ["small", "medium", "large", "xl"]
+var size= ["small", "medium", "large", "xl"];
+var crust = ["regular", "thin", "pan"];
 var pizza = [];
 var allToppings = ["pepperoni", "sausage", "mushrooms"];
 
@@ -26,6 +27,17 @@ var chooseSize = prompt("What size would you like? (S/M/L/XL)?")
     order.size = size[3];
   }
 
+var chooseCrust = prompt("What crust would you like? (reg/thin/pan)")
+  if (chooseCrust === "reg") {
+    order.crust = crust[0];
+  }
+  if (chooseCrust === "thin") {
+    order.crust = crust[1];
+  }
+  if (chooseCrust === "pan") {
+    order.crust = crust[2];
+  }
+
 // var cheese = new Pizza ("large", ["cheese"], 5.00);
 // var pepperoni = new Pizza ("large", ["cheese", "pepperoni"], 6.00);
 // var meats = new Pizza ("large", ["cheese", "pepperoni", "sausage", "bacon"], 8.00);
@@ -38,12 +50,13 @@ Pizza.prototype.priceSet = function() {
     this.price += 2;
   }
   if (this.size === "large") {
-    this.size = size[2];
     this.price += 3.75;
   }
   if (this.size === "xl") {
-    this.size = size[3];
     this.price += 5.25;
+  }
+  if (this.crust === "pan") {
+    this.price += 2.50;
   }
     this.price += (allToppings.length * 2.00);
     return "$" + this.price.toFixed(2);
