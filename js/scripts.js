@@ -1,26 +1,9 @@
 // BUSINESS LOGIC
-function Pizza (size, toppings, price) {
+function Pizza (size, crust, sauce, toppings) {
   this.size = size;
   this.toppings = toppings;
   this.price = price;
 }
-
-function Custom (size, toppings, price) {
-  this.size = size;
-  this.toppings = [];
-  this.price = 3.00
-}
-
-var small = { size: "small", toppings: [], price: 3.00 };
-var medium = { size: "medium", toppings: [], price: 4.00 };
-var large = { size: "large", toppings: [], price: 5.00 };
-
-var pepperoni = { toppings: "pepperoni" };
-var sausage = { toppings: "sausage" };
-var bacon = { toppings: "bacon" };
-var greenPeppers = { toppings: "greenPeppers" };
-var mushrooms = { toppings: "mushrooms" };
-var olives = { toppings: "olives" };
 
 var cheese = new Pizza ("large", ["cheese"], 5.00);
 var pepperoni = new Pizza ("large", ["cheese", "pepperoni"], 6.00);
