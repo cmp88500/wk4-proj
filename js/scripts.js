@@ -1,8 +1,9 @@
 // BUSINESS LOGIC
 function Pizza (size, crust, sauce, toppings) {
   this.size = size;
+  this.crust = crust;
   this.toppings = toppings;
-  this.price = price;
+  this.sauce = sauce;
 }
 
 var cheese = new Pizza ("large", ["cheese"], 5.00);
